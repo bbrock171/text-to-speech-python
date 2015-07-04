@@ -22,7 +22,7 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
     path: .
     memory: 256M
     services:
-    - text-to-speech-service
+    - text-to-speech-service-standard
   ```
 
     The name you use will determinate your application url initially, e.g. `<application-name>.mybluemix.net`.
@@ -36,7 +36,7 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
 5. Create the Text to Speech service in Bluemix
 
   ```sh
-  $ cf create-service text_to_speech free text-to-speech-service
+  $ cf create-service text_to_speech standard text-to-speech-service-standard
   ```
 
 6. Push it live!
@@ -50,7 +50,7 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
 ## Running locally
   The application uses [Python](https://www.python.org) and [pip](https://pip.pypa.io/en/latest/installing.html) so you will have to download and install them as part of the steps below.
 
-1. Copy the credentials from your `text-to-speech-service` service in Bluemix to `server.py`, you can see the credentials using:
+1. Copy the credentials from your `text-to-speech-service-standard` service in Bluemix to `server.py`, you can see the credentials using:
 
   ```sh
   $ cf env <application-name>
@@ -67,8 +67,8 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
           "username": "<username>"
         },
       "label": "text_to_speech",
-      "name": "text-to-speech-service",
-      "plan": "text_to_speech_free_plan"
+      "name": "text-to-speech-service-standard",
+      "plan": "Standard*"
    }]
   }
   }
