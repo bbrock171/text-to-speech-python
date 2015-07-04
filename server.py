@@ -66,7 +66,7 @@ def index():
 
 @app.route('/synthesize', methods=['GET'])
 def synthesize():
-    voice = request.args.get('voice', 'VoiceEnUsMichael')
+    voice = request.args.get('voice', 'en-US_MichaelVoice')
     accept = request.args.get('accept', 'audio/ogg; codecs=opus')
     text = request.args.get('text', '')
 
