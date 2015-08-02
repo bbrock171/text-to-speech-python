@@ -61,14 +61,33 @@ $(document).ready(function() {
   });
 
   function validText(text) {
-    if ($.trim(text)) {
-      $('.error').hide();
-      return true;
-    } else {
+    $('.error').hide();
+    $('.errorMsg').text('');
+    $('.errorMsg').css('color','#5a5a5a');
+
+    if ($.trim(text).length === 0) {
       $('.errorMsg').text('Please enter the text you would like to synthesize in the text window.');
-      $('.errorMsg').css('color','#00b2ef');
+      $('.errorMsg').css('color','#5a5a5a');
       $('.error').show();
       return false;
     }
+
+    if (!containsAllLatin1(text)) {
+      $('.errorMsg').text('Language not supported. Please use only ISO 8859 characters');
+      $('.error').show();
+      return false;
+    }
+
+    return true;
   }
+
+  /**
+   * Check that the text doesn't contains non latin-1 characters.
+   * @param  String  The string to test
+   * @return true if the string is latin-1
+   */
+  function containsAllLatin1(str) {
+    return  /^[A-z\u00C0-\u00ff\s?@¿''\.,-\/#!$%\^&\*;:{}=\-_`~()0-9]+$/.test(str);
+  }
+
 });
