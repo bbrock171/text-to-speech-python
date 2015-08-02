@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/*global $:false */
+
+/*global $, VOICES, SAMPLE_TEXT */
 
 'use strict';
 
@@ -21,6 +22,18 @@ $(document).ready(function() {
   var audio = $('.audio').get(0),
     textArea = $('#textArea');
 
+  Object.keys(VOICES).forEach(function(key) {
+    $('<option>', { value : key })
+    .appendTo($('.select-voice'))
+    .text(VOICES[key]);
+  });
+
+  function updateSampleText() {
+    var lang = $('.select-voice').val().substr(0,5);
+    $('#textArea').text(SAMPLE_TEXT[lang]);
+  }
+  $('.select-voice').change(updateSampleText);
+  updateSampleText();
 
   // IE and Safari not supported disabled Speak button
   if ($('body').hasClass('ie') || $('body').hasClass('safari')) {

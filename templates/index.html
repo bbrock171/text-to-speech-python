@@ -16,7 +16,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row top-nav">
-                    <div class="col-lg-12"><a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/text-to-speech.html" class="left">Learn more about this service</a><a href="https://github.com/watson-developer-cloud/text-to-speech-python" class="right fork">Fork</a><a href="mailto:watsondevelopercloud@wwpdl.vnet.ibm.com" class="right">Contact Us</a><a href="https://developer.ibm.com/watson/" class="right">Watson Community</a>
+                    <div class="col-lg-12">
+                        <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/text-to-speech.html"
+                            class="left">Learn more about this service</a>
+                        <a href="https://github.com/watson-developer-cloud/text-to-speech-python"
+                            class="right fork">Fork</a>
+                        <a href="https://developer.ibm.com/watson/" class="right">Watson Community</a>
                     </div>
                 </div>
                 <div style="padding-bottom:0px;" class="row header">
@@ -42,18 +47,14 @@
                             <div class="row">
                                 <div class="col-lg-12 col-xs-12">
                                     <label for="textArea" class="control-label">Enter or paste the text to be synthesized into speech:</label>
-                                    <textarea id="textArea" name="text" rows="8" required class="form-control">The Text to Speech service uses IBM's speech synthesis capabilities to convert English or Spanish text to an audio signal. The audio is streamed back to the client with minimal delay. The service can be accessed via a REST interface.</textarea><span class="help-block"><small>The text language must match the selected voice language:
+                                    <textarea id="textArea" name="text" rows="8" required class="form-control"></textarea><span class="help-block"><small>The text language must match the selected voice language:
  Mixing language (English text with a Spanish voice) does not produce valid results.</small></span>
                                 </div>
                             </div>
                             <div style="margin-bottom:30px;" class="row">
                                 <label for="voice" class="col-lg-12 col-xs-12 control-label">Select the Voice model:</label>
                                 <div class="col-lg-12 col-xs-12">
-                                    <select id="voice" style="width:100%" name="voice" required class="form-control">
-                                        <option value="en-US_MichaelVoice">English male voice</option>
-                                        <option value="en-US_LisaVoice">English female voice</option>
-                                        <option value="es-ES_LauraVoice">Spanish female voice</option>
-                                        <option value="es-ES_EnriqueVoice">Spanish male voice</option>
+                                    <select class="select-voice" id="voice" style="width:100%" name="voice" required class="form-control">
                                     </select>
                                 </div>
                             </div>
@@ -103,6 +104,7 @@ ogg audio format, including recent versions of <a href="https://www.google.com/i
     </div>
     <script type="text/javascript" src="static/js/browser-detect.js"></script>
     <script type="text/javascript" src="static/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="static/js/constants.js"></script>
     <script type="text/javascript" src="static/js/demo.js"></script>
 </body>
 
