@@ -4,7 +4,7 @@ The [Text to Speech][service_url] service uses IBM's speech synthesis capabiliti
 
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/text-to-speech-python)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
 
 ## Getting Started
 
@@ -45,7 +45,6 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
   $ cf push
   ```
 
-  See the full [Getting Started][getting_started] documentation for more details, including code snippets and references.
 
 ## Running locally
   The application uses [Python](https://www.python.org) and [pip](https://pip.pypa.io/en/latest/installing.html) so you will have to download and install them as part of the steps below.
@@ -68,7 +67,7 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
         },
       "label": "text_to_speech",
       "name": "text-to-speech-service-standard",
-      "plan": "Standard*"
+      "plan": "standard"
    }]
   }
   }

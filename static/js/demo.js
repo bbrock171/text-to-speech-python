@@ -46,7 +46,7 @@ $(document).ready(function() {
 
   $('.audio').on('error', function () {
     $('.result').hide();
-    $('errorMgs').text('Error processing the request.');
+    $('.errorMgs').text('Error processing the request.');
     $('.errorMsg').css('color','red');
     $('.error').show();
   });
@@ -75,7 +75,6 @@ $(document).ready(function() {
 
   function validText(text) {
     $('.error').hide();
-    $('.errorMsg').text('');
     $('.errorMsg').css('color','#5a5a5a');
 
     if ($.trim(text).length === 0) {
