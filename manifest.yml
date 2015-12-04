@@ -1,11 +1,11 @@
 declared-services:
-  text-to-speech-service-standard:
+  text-to-speech:
     type: text_to_speech
     plan: standard
 applications:
-- name: text-to-speech-python
+- name: watson-twitter-brock
   command: python server.py
   path: .
   memory: 512M
   services:
-  - text-to-speech-service-standard
+  - Text to Speech-2w
